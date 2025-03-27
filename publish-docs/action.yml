@@ -16,14 +16,12 @@ inputs:
   documentation_checkout_path:
     description: 'Directory path where the documentation repository will be checked out'
     required: true
-    default: 'documentation-temp'
+    default: '.documentation'
 runs:
   using: composite
   steps:
     - name: Checkout Source Repository
-      uses: actions/checkout@v4
-      with:
-        path: main
+      uses: actions/checkout@v4 
 
     - name: Checkout Documentation Repository
       uses: actions/checkout@v4
